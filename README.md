@@ -62,11 +62,12 @@ no son las publicadas.
 ## Cómo reproducirlo
 
 1. Clona el repositorio y abre la carpeta como proyecto de RStudio.
-2. Instala los paquetes:
+2. Instala los paquetes con las mismas versiones que se usaron (quedan
+   registradas en `renv.lock`):
 
    ```r
-   install.packages(c("dplyr", "tidyr", "ggplot2", "pROC", "epiR",
-                      "AER", "pwr", "rmarkdown", "scales", "svglite", "systemfonts"))
+   install.packages("renv")
+   renv::restore()
    ```
 
 3. Ejecuta `rmarkdown::render("analisis.Rmd")`.
